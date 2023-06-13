@@ -1,0 +1,35 @@
+{set;~api-url;https://api.mcstatus.io/v2/status/bedrock}
+
+{//;you don't need this for a GET with no headers, but this is how to properly set json}
+{jset;~options;method;GET;create}
+
+{set;~body;{jget;{request;{get;~api-url}/PJsWorld.mcpe.be:30812;{get;~options}};body}}
+
+{set;~status;{jget;~body;online}}
+{set;~host;{jget;~body;host}}
+{set;~port;{jget;~body;port}}
+{set;~playersonline;{jget;~body;players.online}}
+{set;~playersmax;{jget;~body;players.max}}
+{set;~motd;{jget;~body;motd.clean}}
+{set;~actualmotd;{shift;{split;{get;~motd};{n}}}}
+
+{send;1111807386550808586;;{buildembed;
+color:{randomChoose;["623e2b", "69A332"]};
+title:PJ's World;
+description:
+**Status**: {if;{get;~status};:green_circle: Online;:red_circle: Offline}
+**Host**: {get;~host}
+**Port**: {get;~port}
+
+{if;{get;~status};
+**Players**: {get;~playersonline}/{get;~playersmax}
+
+**MOTD:** {get;~actualmotd}
+**SERVER:** {substring;{get;~motd};{length;{get;~actualmotd}-}}
+**Edition**: Bedrock
+**Version**: 1.20.0
+;}
+;
+
+thumbnail.url:https://gyazo.com/cc6c5493aecfc47123a3a4a1ac644e93.png
+}}

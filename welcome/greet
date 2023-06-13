@@ -1,0 +1,18 @@
+{void;
+ {set;~firstMessage;{userMention}}}
+   
+ {set;~firstMessageID;{send;1107396265324597330;{get;~firstMessage}}}
+{timer;{delete;1107396265324597330;{get;~firstMessageID}};1800s}
+
+{void;
+{send;1107396265324597330;{get;~secondMessage};{embedbuild;title:Welcome to {guildname}!;color:{randomChoose;["623e2b","69A332","623e2b","69A332"]};description:
+> ***{username}***, please head to <#1111789349927911485> to send,```!mcname <Minecraft Username>```to change your name to correspond with your Minecraft Name & set your timezone by using this [__**LINK**__](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List) to select your timezone & this command to set it,```!timezone <timezone>``` __**Example**__:```!timezone America/Los_Angeles```
+    
+> Once you have changed your name & set your timezone, send```!membership``` to request the Member's role that will be automatically given to you after 7 days of being in the server, you will then be given the full range of the server.
+    
+> We are also currently looking for Beta Testers!
+;footer.text:provided by Krafty Kat, the kraftiest kat there is.
+;thumbnail.url:https://gyazo.com/cc6c5493aecfc47123a3a4a1ac644e93.png}}}
+
+{set;~secondMessageID;{send;1107396265324597330;{get;~secondMessage}}}
+{timer;{delete;1107396265324597330;{get;~secondMessageID}};1800s}

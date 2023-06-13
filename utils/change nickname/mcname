@@ -1,0 +1,11 @@
+{userSetNickname;{args};{userName}}
+
+{userMention},
+{embed;
+{buildembed;
+color:{randomChoose;["623e2b", "69A332"]};
+description:
+Your nickname has been changed to {args}.;
+
+thumbnail.url:https://gyazo.com/cc6c5493aecfc47123a3a4a1ac644e93.png
+}}
