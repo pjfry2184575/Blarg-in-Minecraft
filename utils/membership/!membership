@@ -1,4 +1,4 @@
 .cc set membership 
 {if;{userHasRole;{roleId;Member}};> You already have the Member's role.;
-> Blah blah blah some stuff.....
-> You get a role..... In one week! {timer;{userMention},{n}## Congratulations,{n}> You have received the Members role.{void;{roleAdd;1107469573252452375;{userID};quite}};20s}}
+> Thank you for applying for Membership in one week you will be given the Member role.
+{timer;{userMention},{n}## Congratulations,{n}> You have received the Members role.{void;{roleAdd;1107469573252452375;{userID};quite}};604800s}}
